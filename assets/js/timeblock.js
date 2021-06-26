@@ -6,15 +6,15 @@ const timeblocks = [
 
 function createTimeblock(time, text, index) {
     const timeblockEl = $(`
-        <li class="timeblock list-group-item">
-            <div class="timeblock-time">${time}</div>
-        </li>
+        <div class="row time-block">
+            <div class="col-1 hour">${time}</div>
+        </div>
     `);
     const timeblockInput = $(`
-        <input name="timeblock" class="timeblock-text" value="${text}" />
+        <textarea name="time-block" class="col-9 description">${text}</textarea>
     `);
     const timeblockSaveBtn = $(`
-        <button class="btn btn-primary">
+        <button class="col-1 saveBtn">
             <i class="fas fa-save"></i>
         </button>
     `);
