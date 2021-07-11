@@ -39,3 +39,10 @@ function createTimeblock(time, text, index) {
 
     return timeblockEl;
 }
+
+function displayTimeblocks(timeblocks) {
+    $("#timeblocks").html("");
+    for (let i = 0; i < hours.length; i++) {
+        $("#timeblocks").append(createTimeblock(hours[i], timeblocks[i], i));
+    }
+}

@@ -25,3 +25,8 @@ if (timeblocks === null) {
 for (let i = 0; i < hours.length; i++) {
     $("#timeblocks").append(createTimeblock(hours[i], timeblocks[i], i));
 }
+
+displayTimeblocks(timeblocks);
+setInterval(() => {
+    displayTimeblocks(timeblocks);
+}, 1000 * 60 * 5)
